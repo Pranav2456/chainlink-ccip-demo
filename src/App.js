@@ -194,8 +194,9 @@ function App() {
           const { state } = events[0].args;
           const status = getMessageStatus(state);
           setMessageStatus(status);
+      } else {
+          setMessageStatus(`Either the message ${messageId} does not exist or it has not been processed yet on destination chain`);
       }
-      setMessageStatus(`Either the message ${messageId} does not exist or it has not been processed yet on destination chain`)
   } 
   };
 
